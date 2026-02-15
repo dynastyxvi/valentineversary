@@ -1,0 +1,1297 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Happy Valentine's Day \uc0\u10084 \u65039 </title>\
+    <style>\
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+\
+        body \{\
+            font-family: 'Garamond', 'Georgia', serif;\
+            overflow-x: hidden;\
+            background: #ffb3d9;\
+            background-image: \
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px),\
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,.05) 35px, rgba(255,255,255,.05) 70px);\
+            color: #fff;\
+            position: relative;\
+        \}\
+\
+        .hello-kitty-bg \{\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            pointer-events: none;\
+            z-index: 1;\
+            opacity: 0.15;\
+        \}\
+\
+        .kitty-bow \{\
+            position: absolute;\
+            font-size: 80px;\
+            opacity: 0.3;\
+        \}\
+\
+        .grain-overlay \{\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            background: \
+                radial-gradient(ellipse at top, rgba(255, 107, 157, 0.15) 0%, transparent 50%),\
+                radial-gradient(ellipse at bottom, rgba(192, 108, 132, 0.1) 0%, transparent 50%);\
+            pointer-events: none;\
+            z-index: 1;\
+        \}\
+\
+        .hearts-bg \{\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            pointer-events: none;\
+            z-index: 2;\
+            opacity: 0.6;\
+        \}\
+\
+        .heart \{\
+            position: absolute;\
+            font-size: 20px;\
+            animation: float 15s infinite;\
+            opacity: 0;\
+        \}\
+\
+        .sanrio-float \{\
+            position: fixed;\
+            font-size: 40px;\
+            pointer-events: none;\
+            z-index: 100;\
+            animation: floatSanrio 8s ease-in-out infinite;\
+            filter: drop-shadow(3px 3px 6px rgba(255, 182, 193, 0.4));\
+            opacity: 0.7;\
+        \}\
+\
+        @keyframes floatSanrio \{\
+            0%, 100% \{\
+                transform: translateY(0) translateX(0) rotate(0deg);\
+            \}\
+            25% \{\
+                transform: translateY(-30px) translateX(20px) rotate(10deg);\
+            \}\
+            50% \{\
+                transform: translateY(-10px) translateX(-20px) rotate(-10deg);\
+            \}\
+            75% \{\
+                transform: translateY(-40px) translateX(10px) rotate(5deg);\
+            \}\
+        \}\
+\
+        .sanrio-corner \{\
+            position: fixed;\
+            font-size: 50px;\
+            z-index: 100;\
+            pointer-events: none;\
+            animation: bounce 3s ease-in-out infinite;\
+            filter: drop-shadow(3px 3px 6px rgba(255, 182, 193, 0.4));\
+            opacity: 0.8;\
+        \}\
+\
+        .sanrio-top-left \{\
+            top: 20px;\
+            left: 20px;\
+        \}\
+\
+        .sanrio-top-right \{\
+            top: 20px;\
+            right: 20px;\
+            animation-delay: 1.5s;\
+        \}\
+\
+        .sanrio-bottom-left \{\
+            bottom: 20px;\
+            left: 20px;\
+            animation-delay: 0.75s;\
+        \}\
+\
+        .sanrio-bottom-right \{\
+            bottom: 20px;\
+            right: 20px;\
+            animation-delay: 2.25s;\
+        \}\
+\
+        @keyframes bounce \{\
+            0%, 100% \{\
+                transform: translateY(0) scale(1);\
+            \}\
+            50% \{\
+                transform: translateY(-20px) scale(1.1);\
+            \}\
+        \}\
+\
+        @keyframes float \{\
+            0% \{\
+                transform: translateY(100vh) rotate(0deg);\
+                opacity: 0;\
+            \}\
+            10% \{\
+                opacity: 0.3;\
+            \}\
+            90% \{\
+                opacity: 0.3;\
+            \}\
+            100% \{\
+                transform: translateY(-100px) rotate(360deg);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        .container \{\
+            position: relative;\
+            z-index: 3;\
+            max-width: 1200px;\
+            margin: 0 auto;\
+            padding: 20px;\
+        \}\
+\
+        .section \{\
+            background: rgba(255, 255, 255, 0.95);\
+            backdrop-filter: blur(20px);\
+            border: 2px solid rgba(255, 182, 193, 0.3);\
+            border-radius: 30px;\
+            padding: 80px 60px;\
+            margin: 60px 0;\
+            box-shadow: 0 20px 60px rgba(255, 107, 157, 0.3);\
+            opacity: 0;\
+            transform: translateY(50px);\
+            animation: fadeInUp 1s forwards;\
+        \}\
+\
+        @keyframes fadeInUp \{\
+            to \{\
+                opacity: 1;\
+                transform: translateY(0);\
+            \}\
+        \}\
+\
+        .hero \{\
+            text-align: center;\
+            animation-delay: 0.2s;\
+            padding: 120px 60px;\
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.3) 0%, rgba(255, 209, 220, 0.2) 100%);\
+        \}\
+\
+        .hero h1 \{\
+            font-size: 4.5em;\
+            background: linear-gradient(135deg, #ff1493, #ff69b4);\
+            -webkit-background-clip: text;\
+            -webkit-text-fill-color: transparent;\
+            background-clip: text;\
+            margin-bottom: 20px;\
+            font-weight: 400;\
+            letter-spacing: 2px;\
+        \}\
+\
+        .hero p \{\
+            font-size: 1.5em;\
+            color: #d63384;\
+            font-weight: 400;\
+            letter-spacing: 1px;\
+        \}\
+\
+        .counter-section \{\
+            animation-delay: 0.4s;\
+        \}\
+\
+        .counter-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\
+            gap: 30px;\
+            margin-top: 40px;\
+        \}\
+\
+        .counter-item \{\
+            text-align: center;\
+            padding: 40px 30px;\
+            background: linear-gradient(135deg, #ffb3d9 0%, #ffc9e3 100%);\
+            border: 2px solid #ff69b4;\
+            border-radius: 20px;\
+            transition: all 0.4s;\
+        \}\
+\
+        .counter-item:hover \{\
+            transform: translateY(-10px) scale(1.05);\
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);\
+        \}\
+\
+        .counter-number \{\
+            font-size: 3.5em;\
+            font-weight: 700;\
+            display: block;\
+            margin-bottom: 10px;\
+            color: #ff1493;\
+        \}\
+\
+        .counter-item span:last-child \{\
+            font-size: 1.2em;\
+            color: #d63384;\
+            text-transform: uppercase;\
+            letter-spacing: 2px;\
+            font-weight: 600;\
+        \}\
+\
+        .memories-section \{\
+            animation-delay: 0.6s;\
+        \}\
+\
+        .memory-box \{\
+            background: linear-gradient(135deg, #ffc9e3 0%, #ffe0f0 100%);\
+            border: 2px solid #ff69b4;\
+            padding: 40px;\
+            border-radius: 20px;\
+            margin: 25px 0;\
+            cursor: pointer;\
+            transition: all 0.4s;\
+        \}\
+\
+        .memory-box:hover \{\
+            transform: translateX(10px);\
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);\
+        \}\
+\
+        .memory-box h3 \{\
+            color: #ff1493;\
+            margin-bottom: 15px;\
+            font-size: 1.8em;\
+            font-weight: 600;\
+        \}\
+\
+        .memory-box p \{\
+            color: #d63384;\
+            line-height: 1.8;\
+            font-size: 1.1em;\
+        \}\
+\
+        .gallery-section \{\
+            animation-delay: 0.7s;\
+        \}\
+\
+        .gallery-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+            gap: 30px;\
+            margin-top: 40px;\
+        \}\
+\
+        .gallery-item \{\
+            position: relative;\
+            border-radius: 20px;\
+            overflow: hidden;\
+            cursor: pointer;\
+            transition: all 0.4s ease;\
+            aspect-ratio: 1;\
+            background: linear-gradient(135deg, #ffb3d9 0%, #ffc9e3 100%);\
+            border: 3px solid #ff69b4;\
+        \}\
+\
+        .gallery-item:hover \{\
+            transform: scale(1.05) rotate(2deg);\
+            box-shadow: 0 20px 50px rgba(255, 105, 180, 0.5);\
+        \}\
+\
+        .gallery-item img \{\
+            width: 100%;\
+            height: 100%;\
+            object-fit: cover;\
+            display: block;\
+            transition: transform 0.4s;\
+        \}\
+\
+        .gallery-item:hover img \{\
+            transform: scale(1.1);\
+        \}\
+\
+        .gallery-placeholder \{\
+            display: flex;\
+            flex-direction: column;\
+            align-items: center;\
+            justify-content: center;\
+            height: 100%;\
+            color: #ff1493;\
+            font-size: 3em;\
+            text-align: center;\
+            padding: 20px;\
+        \}\
+\
+        .gallery-placeholder p \{\
+            font-size: 0.3em;\
+            margin-top: 10px;\
+            font-style: italic;\
+            color: #d63384;\
+        \}\
+\
+        .gallery-caption \{\
+            position: absolute;\
+            bottom: 0;\
+            left: 0;\
+            right: 0;\
+            background: linear-gradient(to top, rgba(255, 20, 147, 0.9), transparent);\
+            color: white;\
+            padding: 25px;\
+            font-size: 1.1em;\
+            font-weight: 600;\
+            transform: translateY(100%);\
+            transition: transform 0.4s;\
+        \}\
+\
+        .gallery-item:hover .gallery-caption \{\
+            transform: translateY(0);\
+        \}\
+\
+        .reasons-section \{\
+            animation-delay: 0.8s;\
+        \}\
+\
+        .reason-card \{\
+            background: linear-gradient(135deg, #ffe0f0 0%, #fff5fa 100%);\
+            border-left: 5px solid #ff1493;\
+            padding: 30px;\
+            margin: 20px 0;\
+            border-radius: 15px;\
+            transition: all 0.4s;\
+        \}\
+\
+        .reason-card:hover \{\
+            transform: translateX(10px);\
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);\
+            border-left-width: 8px;\
+        \}\
+\
+        .reason-number \{\
+            display: inline-block;\
+            background: linear-gradient(135deg, #ff1493, #ff69b4);\
+            color: white;\
+            width: 45px;\
+            height: 45px;\
+            border-radius: 50%;\
+            text-align: center;\
+            line-height: 45px;\
+            margin-right: 20px;\
+            font-weight: 700;\
+            font-size: 1.2em;\
+        \}\
+\
+        .reason-card strong \{\
+            color: #d63384;\
+            font-weight: 600;\
+            font-size: 1.15em;\
+        \}\
+\
+        .wheel-section \{\
+            animation-delay: 0.9s;\
+        \}\
+\
+        .wheel-container \{\
+            position: relative;\
+            width: 400px;\
+            height: 400px;\
+            margin: 50px auto;\
+        \}\
+\
+        .wheel \{\
+            width: 100%;\
+            height: 100%;\
+            border-radius: 50%;\
+            border: 15px solid #ff1493;\
+            position: relative;\
+            transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);\
+            background: conic-gradient(\
+                from 0deg,\
+                #ffc9e3 0deg 45deg,\
+                #ffb3d9 45deg 90deg,\
+                #ff9ed4 90deg 135deg,\
+                #ff89cf 135deg 180deg,\
+                #ff69b4 180deg 225deg,\
+                #ff89cf 225deg 270deg,\
+                #ff9ed4 270deg 315deg,\
+                #ffb3d9 315deg 360deg\
+            );\
+            box-shadow: 0 15px 50px rgba(255, 20, 147, 0.4);\
+        \}\
+\
+        .wheel-center \{\
+            position: absolute;\
+            top: 50%;\
+            left: 50%;\
+            transform: translate(-50%, -50%);\
+            width: 100px;\
+            height: 100px;\
+            background: white;\
+            border-radius: 50%;\
+            border: 5px solid #ff1493;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            font-size: 3em;\
+            z-index: 10;\
+            box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);\
+        \}\
+\
+        .wheel-pointer \{\
+            position: absolute;\
+            top: -35px;\
+            left: 50%;\
+            transform: translateX(-50%);\
+            width: 0;\
+            height: 0;\
+            border-left: 25px solid transparent;\
+            border-right: 25px solid transparent;\
+            border-top: 50px solid #ff1493;\
+            filter: drop-shadow(0 8px 15px rgba(255, 20, 147, 0.5));\
+            z-index: 11;\
+        \}\
+\
+        .spin-button \{\
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);\
+            border: none;\
+            color: white;\
+            padding: 25px 70px;\
+            font-size: 1.5em;\
+            border-radius: 50px;\
+            cursor: pointer;\
+            transition: all 0.3s;\
+            margin: 30px auto;\
+            display: block;\
+            font-weight: 700;\
+            letter-spacing: 3px;\
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);\
+        \}\
+\
+        .spin-button:hover \{\
+            transform: scale(1.1);\
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);\
+        \}\
+\
+        .spin-button:disabled \{\
+            opacity: 0.5;\
+            cursor: not-allowed;\
+            transform: scale(1);\
+        \}\
+\
+        .wheel-result \{\
+            text-align: center;\
+            margin-top: 35px;\
+            padding: 40px;\
+            background: linear-gradient(135deg, #ffe0f0 0%, #fff5fa 100%);\
+            border: 3px solid #ff69b4;\
+            border-radius: 20px;\
+            min-height: 120px;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            font-size: 1.3em;\
+            color: #d63384;\
+            font-weight: 600;\
+            line-height: 1.7;\
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);\
+        \}\
+\
+        .interactive-button \{\
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);\
+            border: none;\
+            color: white;\
+            padding: 25px 60px;\
+            font-size: 1.4em;\
+            border-radius: 50px;\
+            cursor: pointer;\
+            transition: all 0.3s;\
+            margin: 25px auto;\
+            display: block;\
+            font-weight: 700;\
+            letter-spacing: 2px;\
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);\
+        \}\
+\
+        .interactive-button:hover \{\
+            transform: scale(1.1);\
+            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.6);\
+        \}\
+\
+        .hidden \{\
+            display: none;\
+        \}\
+\
+        .surprise-box \{\
+            background: linear-gradient(135deg, #ffc9e3 0%, #ffe0f0 100%);\
+            border: 3px solid #ff1493;\
+            color: #d63384;\
+            padding: 50px;\
+            border-radius: 25px;\
+            text-align: center;\
+            margin-top: 30px;\
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);\
+        \}\
+\
+        .surprise-box h2 \{\
+            font-size: 2.8em;\
+            margin-bottom: 25px;\
+            color: #ff1493;\
+            font-weight: 700;\
+        \}\
+\
+        .surprise-box p \{\
+            font-size: 1.2em;\
+            line-height: 1.9;\
+        \}\
+\
+        .love-message \{\
+            animation-delay: 1s;\
+            text-align: center;\
+            font-size: 1.4em;\
+            line-height: 2.2;\
+            color: #d63384;\
+        \}\
+\
+        .love-message strong \{\
+            color: #ff1493;\
+            font-size: 1.3em;\
+            font-weight: 700;\
+        \}\
+\
+        .lightbox \{\
+            display: none;\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            background: rgba(0, 0, 0, 0.95);\
+            z-index: 1000;\
+            align-items: center;\
+            justify-content: center;\
+            animation: fadeIn 0.3s;\
+        \}\
+\
+        .lightbox.active \{\
+            display: flex;\
+        \}\
+\
+        .lightbox-content \{\
+            max-width: 90%;\
+            max-height: 90%;\
+            position: relative;\
+        \}\
+\
+        .lightbox-content img \{\
+            max-width: 100%;\
+            max-height: 90vh;\
+            border-radius: 15px;\
+            border: 5px solid #ff69b4;\
+            box-shadow: 0 0 60px rgba(255, 105, 180, 0.6);\
+        \}\
+\
+        .lightbox-close \{\
+            position: absolute;\
+            top: 20px;\
+            right: 20px;\
+            font-size: 45px;\
+            color: #ff69b4;\
+            cursor: pointer;\
+            background: white;\
+            width: 60px;\
+            height: 60px;\
+            border-radius: 50%;\
+            border: 3px solid #ff69b4;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            transition: all 0.3s;\
+            font-weight: bold;\
+        \}\
+\
+        .lightbox-close:hover \{\
+            background: #ff1493;\
+            color: white;\
+            transform: rotate(90deg) scale(1.1);\
+        \}\
+\
+        .lightbox-caption \{\
+            text-align: center;\
+            color: white;\
+            margin-top: 25px;\
+            font-size: 1.5em;\
+            font-weight: 600;\
+        \}\
+\
+        .confetti \{\
+            position: fixed;\
+            width: 10px;\
+            height: 10px;\
+            pointer-events: none;\
+            z-index: 9999;\
+            animation: confettiFall 3s ease-out forwards;\
+        \}\
+\
+        @keyframes confettiFall \{\
+            0% \{\
+                transform: translateY(0) rotate(0deg);\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: translateY(100vh) rotate(720deg);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        .click-popup \{\
+            position: fixed;\
+            font-size: 60px;\
+            pointer-events: none;\
+            z-index: 9999;\
+            animation: popAndFade 1.5s ease-out forwards;\
+            filter: drop-shadow(3px 3px 8px rgba(255, 20, 147, 0.8));\
+        \}\
+\
+        @keyframes popAndFade \{\
+            0% \{\
+                transform: scale(0) rotate(0deg);\
+                opacity: 0;\
+            \}\
+            30% \{\
+                transform: scale(1.4) rotate(15deg);\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: scale(0.5) translateY(-100px) rotate(45deg);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        .sparkle \{\
+            position: fixed;\
+            width: 6px;\
+            height: 6px;\
+            background: #ff1493;\
+            border-radius: 50%;\
+            pointer-events: none;\
+            z-index: 9999;\
+            animation: sparkleAnim 1s ease-out forwards;\
+            box-shadow: 0 0 15px #ff69b4;\
+        \}\
+\
+        @keyframes sparkleAnim \{\
+            0% \{\
+                transform: scale(1);\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: scale(0) translateY(-60px);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        .floating-message \{\
+            position: fixed;\
+            background: linear-gradient(135deg, #ffc9e3, #ffe0f0);\
+            border: 2px solid #ff69b4;\
+            color: #ff1493;\
+            padding: 18px 35px;\
+            border-radius: 50px;\
+            font-size: 1.2em;\
+            font-weight: 600;\
+            box-shadow: 0 12px 35px rgba(255, 105, 180, 0.4);\
+            z-index: 9999;\
+            pointer-events: none;\
+            animation: messageFloat 3s ease-in-out forwards;\
+        \}\
+\
+        @keyframes messageFloat \{\
+            0% \{\
+                transform: translateY(0) scale(0);\
+                opacity: 0;\
+            \}\
+            10% \{\
+                transform: translateY(-20px) scale(1);\
+                opacity: 1;\
+            \}\
+            90% \{\
+                transform: translateY(-80px) scale(1);\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: translateY(-100px) scale(0.8);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        @keyframes fadeIn \{\
+            from \{ opacity: 0; \}\
+            to \{ opacity: 1; \}\
+        \}\
+\
+        h2 \{\
+            color: #ff1493;\
+            font-size: 3em;\
+            margin-bottom: 40px;\
+            text-align: center;\
+            font-weight: 700;\
+            letter-spacing: 2px;\
+        \}\
+\
+        .explosion-overlay \{\
+            position: fixed;\
+            top: 0;\
+            left: 0;\
+            width: 100%;\
+            height: 100%;\
+            background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ffb3d9 100%);\
+            z-index: 10000;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            animation: explosionPulse 2s ease-in-out;\
+        \}\
+\
+        .explosion-overlay.fade-out \{\
+            animation: fadeOutExplosion 1.5s forwards;\
+        \}\
+\
+        @keyframes explosionPulse \{\
+            0%, 100% \{ transform: scale(1); \}\
+            50% \{ transform: scale(1.05); \}\
+        \}\
+\
+        @keyframes fadeOutExplosion \{\
+            to \{\
+                opacity: 0;\
+                transform: scale(1.2);\
+            \}\
+        \}\
+\
+        .explosion-content \{\
+            text-align: center;\
+            animation: popIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);\
+        \}\
+\
+        @keyframes popIn \{\
+            0% \{\
+                transform: scale(0) rotate(-180deg);\
+                opacity: 0;\
+            \}\
+            100% \{\
+                transform: scale(1) rotate(0deg);\
+                opacity: 1;\
+            \}\
+        \}\
+\
+        .explosion-content h1 \{\
+            font-size: 6em;\
+            color: white;\
+            margin-bottom: 30px;\
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(255, 20, 147, 0.6);\
+            animation: textGlow 1.5s ease-in-out infinite alternate;\
+            font-weight: 900;\
+            letter-spacing: 3px;\
+        \}\
+\
+        @keyframes textGlow \{\
+            from \{\
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 20, 147, 0.4);\
+            \}\
+            to \{\
+                text-shadow: 0 0 40px rgba(255, 255, 255, 1), 0 0 80px rgba(255, 20, 147, 0.8);\
+            \}\
+        \}\
+\
+        .explosion-content p \{\
+            font-size: 2.5em;\
+            color: white;\
+            font-weight: 600;\
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);\
+            animation: float 3s ease-in-out infinite;\
+        \}\
+\
+        .explosion-hearts \{\
+            position: absolute;\
+            width: 100%;\
+            height: 100%;\
+            pointer-events: none;\
+        \}\
+\
+        .explosion-heart \{\
+            position: absolute;\
+            font-size: 60px;\
+            animation: heartExplode 2s ease-out forwards;\
+        \}\
+\
+        @keyframes heartExplode \{\
+            0% \{\
+                transform: translate(-50%, -50%) scale(0);\
+                opacity: 1;\
+            \}\
+            50% \{\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: translate(var(--tx), var(--ty)) scale(1) rotate(360deg);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        .big-confetti \{\
+            position: absolute;\
+            width: 15px;\
+            height: 15px;\
+            animation: bigConfettiFall 3s ease-out forwards;\
+        \}\
+\
+        @keyframes bigConfettiFall \{\
+            0% \{\
+                transform: translateY(0) rotate(0deg) scale(0);\
+                opacity: 1;\
+            \}\
+            100% \{\
+                transform: translateY(100vh) rotate(720deg) scale(1);\
+                opacity: 0;\
+            \}\
+        \}\
+\
+        @media (max-width: 768px) \{\
+            .explosion-content h1 \{\
+                font-size: 3.5em;\
+            \}\
+            .explosion-content p \{\
+                font-size: 1.8em;\
+            \}\
+            .hero h1 \{\
+                font-size: 3em;\
+            \}\
+            .section \{\
+                padding: 50px 30px;\
+            \}\
+            .wheel-container \{\
+                width: 300px;\
+                height: 300px;\
+            \}\
+            .wheel-center \{\
+                width: 70px;\
+                height: 70px;\
+                font-size: 2em;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <div class="explosion-overlay" id="explosionOverlay">\
+        <div class="explosion-hearts" id="explosionHearts"></div>\
+        <div class="explosion-content">\
+            <h1>HAPPY VALENTINE'S DAY BABY!</h1>\
+            <p>I made this for you</p>\
+        </div>\
+    </div>\
+    <div class="hello-kitty-bg">\
+        <div class="kitty-bow" style="top: 5%; left: 10%;">\uc0\u55356 \u57216 </div>\
+        <div class="kitty-bow" style="top: 15%; right: 8%;">\uc0\u55356 \u57216 </div>\
+        <div class="kitty-bow" style="top: 40%; left: 5%;">\uc0\u55356 \u57216 </div>\
+        <div class="kitty-bow" style="top: 60%; right: 12%;">\uc0\u55356 \u57216 </div>\
+        <div class="kitty-bow" style="bottom: 20%; left: 15%;">\uc0\u55356 \u57216 </div>\
+        <div class="kitty-bow" style="bottom: 10%; right: 10%;">\uc0\u55356 \u57216 </div>\
+    </div>\
+    <div class="grain-overlay"></div>\
+    <div class="hearts-bg" id="heartsContainer"></div>\
+    \
+    <!-- Sanrio corner decorations -->\
+    <div class="sanrio-corner sanrio-top-left">\uc0\u55356 \u57216 </div>\
+    <div class="sanrio-corner sanrio-top-right">\uc0\u55356 \u57144 </div>\
+    <div class="sanrio-corner sanrio-bottom-left">\uc0\u10024 </div>\
+    <div class="sanrio-corner sanrio-bottom-right">\uc0\u55358 \u56824 </div>\
+    \
+    <div class="container">\
+        <div class="section hero">\
+            <h1>Happy Valentine's Day!</h1>\
+            <p>Celebrating our journey since April 8, 2024</p>\
+        </div>\
+\
+        <div class="section counter-section">\
+            <h2>Our Time Together</h2>\
+            <div class="counter-grid">\
+                <div class="counter-item">\
+                    <span class="counter-number" id="months">0</span>\
+                    <span>Months</span>\
+                </div>\
+                <div class="counter-item">\
+                    <span class="counter-number" id="weeks">0</span>\
+                    <span>Weeks</span>\
+                </div>\
+                <div class="counter-item">\
+                    <span class="counter-number" id="days">0</span>\
+                    <span>Days</span>\
+                </div>\
+                <div class="counter-item">\
+                    <span class="counter-number">\uc0\u8734 </span>\
+                    <span>Memories</span>\
+                </div>\
+            </div>\
+        </div>\
+\
+        <div class="section memories-section">\
+            <h2>Our Favorite Memories</h2>\
+            <div class="memory-box">\
+                <h3>The Lunch Line</h3>\
+                <p>I still remember us talking on the lunch time for the first time that day I was crushing so hard and the butterflies didn't leave my stomach for the whole rest of the day I was actually like lovesick it was wicked.</p>\
+            </div>\
+            <div class="memory-box">\
+                <h3>That Random Adventure</h3>\
+                <p>All those spontaneous moments where we just decided to go somewhere new, try something different. Every adventure with you is my favorite adventure.</p>\
+            </div>\
+            <div class="memory-box">\
+                <h3>Every Day Moments</h3>\
+                <p>The late night talks, the inside jokes, the comfortable silences. It's the little everyday things that make us so goated.</p>\
+            </div>\
+        </div>\
+\
+        <div class="section reasons-section">\
+            <h2>Reasons I Love You</h2>\
+            <div class="reason-card">\
+                <span class="reason-number">1</span>\
+                <strong>Your smile lights up my entire day and makes everything better</strong>\
+            </div>\
+            <div class="reason-card">\
+                <span class="reason-number">2</span>\
+                <strong>You understand me in ways no one else does</strong>\
+            </div>\
+            <div class="reason-card">\
+                <span class="reason-number">3</span>\
+                <strong>You make me laugh even when I don't feel like smiling</strong>\
+            </div>\
+            <div class="reason-card">\
+                <span class="reason-number">4</span>\
+                <strong>You're my best friend and my favorite person</strong>\
+            </div>\
+            <div class="reason-card">\
+                <span class="reason-number">5</span>\
+                <strong>Every moment with you feels like home</strong>\
+            </div>\
+            <div class="reason-card">\
+                <span class="reason-number">6</span>\
+                <strong>You inspire me to be a better person every single day</strong>\
+            </div>\
+        </div>\
+\
+        <div class="section wheel-section">\
+            <h2>Spin the Wheel of Love</h2>\
+            <p style="text-align: center; font-size: 1.3em; color: #d63384; margin-bottom: 20px; font-weight: 600;">\
+                Spin to discover another reason why you're amazing!\
+            </p>\
+            <div class="wheel-container">\
+                <div class="wheel-pointer"></div>\
+                <div class="wheel" id="wheel">\
+                    <div class="wheel-center">\uc0\u55357 \u56470 </div>\
+                </div>\
+            </div>\
+            <button class="spin-button" id="spinButton" onclick="spinWheel()">SPIN!</button>\
+            <div class="wheel-result" id="wheelResult">\
+                Click spin to see why I love you!\
+            </div>\
+        </div>\
+\
+        <div class="section">\
+            <button class="interactive-button" onclick="showSurprise()">Click for a Special Message</button>\
+            <div id="surpriseMessage" class="surprise-box hidden">\
+                <h2>To My Love</h2>\
+                <p style="font-size: 1.2em; line-height: 1.9;">\
+                    Since I've met you my life has been so so much brighter. You brought me happiness and joy and love like no other. You are so awesome sauce and I really don't deserve you again i love you sososososososososos much. Happy Valentines Day baby\
+                </p>\
+            </div>\
+        </div>\
+\
+        <div class="section love-message">\
+            <p>\
+                <strong>Every love song is about you.</strong><br>\
+                Every sunset reminds me of our moments together.<br>\
+                Every laugh we share is a memory I'll treasure forever.<br>\
+                <strong>You are my today and all of my tomorrows.</strong>\
+            </p>\
+        </div>\
+    </div>\
+\
+    <script>\
+        // EXPLOSION INTRO\
+        window.addEventListener('load', () => \{\
+            const overlay = document.getElementById('explosionOverlay');\
+            const heartsContainer = document.getElementById('explosionHearts');\
+            \
+            // Create explosion hearts\
+            for(let i = 0; i < 40; i++) \{\
+                setTimeout(() => \{\
+                    const heart = document.createElement('div');\
+                    heart.className = 'explosion-heart';\
+                    heart.innerHTML = ['\uc0\u55357 \u56469 ', '\u55357 \u56470 ', '\u55357 \u56471 ', '\u55357 \u56477 ', '\u10084 \u65039 '][Math.floor(Math.random() * 5)];\
+                    heart.style.left = '50%';\
+                    heart.style.top = '50%';\
+                    \
+                    const angle = (i / 40) * 360 * (Math.PI / 180);\
+                    const distance = 300 + Math.random() * 400;\
+                    const tx = Math.cos(angle) * distance;\
+                    const ty = Math.sin(angle) * distance;\
+                    \
+                    heart.style.setProperty('--tx', tx + 'px');\
+                    heart.style.setProperty('--ty', ty + 'px');\
+                    heart.style.animationDelay = (i * 0.02) + 's';\
+                    \
+                    heartsContainer.appendChild(heart);\
+                \}, i * 30);\
+            \}\
+            \
+            // Create big confetti\
+            for(let i = 0; i < 150; i++) \{\
+                setTimeout(() => \{\
+                    const confetti = document.createElement('div');\
+                    confetti.className = 'big-confetti';\
+                    confetti.style.left = Math.random() * 100 + '%';\
+                    confetti.style.top = -20 + 'px';\
+                    confetti.style.backgroundColor = ['#ff1493', '#ff69b4', '#ffb3d9', '#ffc9e3', '#ffe0f0', '#fff'][Math.floor(Math.random() * 6)];\
+                    confetti.style.width = (Math.random() * 15 + 10) + 'px';\
+                    confetti.style.height = (Math.random() * 15 + 10) + 'px';\
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';\
+                    confetti.style.animationDelay = Math.random() * 0.5 + 's';\
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';\
+                    heartsContainer.appendChild(confetti);\
+                \}, i * 20);\
+            \}\
+            \
+            // Remove explosion after 4 seconds\
+            setTimeout(() => \{\
+                overlay.classList.add('fade-out');\
+                setTimeout(() => \{\
+                    overlay.remove();\
+                \}, 1500);\
+            \}, 4000);\
+        \});\
+\
+        // Floating hearts animation\
+        function createHeart() \{\
+            const heart = document.createElement('div');\
+            heart.className = 'heart';\
+            heart.innerHTML = '\uc0\u55357 \u56469 ';\
+            heart.style.left = Math.random() * 100 + '%';\
+            heart.style.animationDuration = (Math.random() * 10 + 10) + 's';\
+            heart.style.animationDelay = Math.random() * 5 + 's';\
+            document.getElementById('heartsContainer').appendChild(heart);\
+            \
+            setTimeout(() => heart.remove(), 20000);\
+        \}\
+\
+        // Create Sanrio floating characters\
+        function createSanrioFloat() \{\
+            const sanrioChars = ['\uc0\u55356 \u57216 ', '\u55356 \u57144 ', '\u55358 \u56824 ', '\u55356 \u57218 ', '\u55356 \u57171 ', '\u55356 \u57096 ', '\u11088 ', '\u55357 \u56470 ', '\u55358 \u56708 ', '\u55356 \u57200 ', '\u55357 \u56477 ', '\u55356 \u57146 ', '\u55356 \u57258 '];\
+            const sanrio = document.createElement('div');\
+            sanrio.className = 'sanrio-float';\
+            sanrio.innerHTML = sanrioChars[Math.floor(Math.random() * sanrioChars.length)];\
+            sanrio.style.left = Math.random() * 90 + 5 + '%';\
+            sanrio.style.top = Math.random() * 80 + 10 + '%';\
+            sanrio.style.animationDelay = Math.random() * 2 + 's';\
+            document.body.appendChild(sanrio);\
+            \
+            setTimeout(() => sanrio.remove(), 8000);\
+        \}\
+\
+        // Click popup animation\
+        const cuteChars = ['\uc0\u55357 \u56469 ', '\u55356 \u57216 ', '\u10024 ', '\u55357 \u56470 ', '\u55356 \u57144 ', '\u55357 \u56477 ', '\u55358 \u56708 ', '\u55358 \u56824 ', '\u55356 \u57171 ', '\u11088 ', '\u55356 \u57146 ', '\u55357 \u56471 '];\
+\
+        document.addEventListener('click', (e) => \{\
+            const popup = document.createElement('div');\
+            popup.className = 'click-popup';\
+            popup.innerHTML = cuteChars[Math.floor(Math.random() * cuteChars.length)];\
+            popup.style.left = e.clientX + 'px';\
+            popup.style.top = e.clientY + 'px';\
+            document.body.appendChild(popup);\
+            \
+            for(let i = 0; i < 5; i++) \{\
+                setTimeout(() => \{\
+                    const sparkle = document.createElement('div');\
+                    sparkle.className = 'sparkle';\
+                    sparkle.style.left = (e.clientX + (Math.random() - 0.5) * 50) + 'px';\
+                    sparkle.style.top = (e.clientY + (Math.random() - 0.5) * 50) + 'px';\
+                    document.body.appendChild(sparkle);\
+                    setTimeout(() => sparkle.remove(), 1000);\
+                \}, i * 50);\
+            \}\
+            \
+            setTimeout(() => popup.remove(), 1500);\
+        \});\
+\
+        // Random cute messages\
+        const loveMessages = [\
+            'I love you',\
+            'I love you 3000',\
+            'Errands call\'85',\
+            'Pre calc homework..',\
+            'Delta math\'85.'\
+        ];\
+\
+        function showRandomMessage() \{\
+            const message = document.createElement('div');\
+            message.className = 'floating-message';\
+            message.innerHTML = loveMessages[Math.floor(Math.random() * loveMessages.length)];\
+            message.style.left = Math.random() * 60 + 20 + '%';\
+            message.style.top = Math.random() * 40 + 30 + '%';\
+            document.body.appendChild(message);\
+            \
+            setTimeout(() => message.remove(), 3000);\
+        \}\
+\
+        // Confetti explosion\
+        function createConfetti(x, y, amount = 50) \{\
+            const colors = ['#ff1493', '#ff69b4', '#ffb3d9', '#ffc9e3', '#ffe0f0', '#ff89cf'];\
+            \
+            for(let i = 0; i < amount; i++) \{\
+                setTimeout(() => \{\
+                    const confetti = document.createElement('div');\
+                    confetti.className = 'confetti';\
+                    confetti.style.left = x + 'px';\
+                    confetti.style.top = y + 'px';\
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];\
+                    confetti.style.width = (Math.random() * 12 + 6) + 'px';\
+                    confetti.style.height = (Math.random() * 12 + 6) + 'px';\
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';\
+                    \
+                    const angle = (Math.random() * 360) * (Math.PI / 180);\
+                    const velocity = Math.random() * 200 + 100;\
+                    \
+                    document.body.appendChild(confetti);\
+                    setTimeout(() => confetti.remove(), 3000);\
+                \}, i * 10);\
+            \}\
+        \}\
+\
+        // Wheel of reasons\
+        const wheelReasons = [\
+            "You make even boring days feel special",\
+            "You're incredibly smart and I love learning from you",\
+            "Your hugs make it feel like home",\
+            "You believe in me even when I don't believe in myself",\
+            "The little things you do show how much you care",\
+            "You make me want to be a better person every day",\
+            "Your eyes light up when you talk about things you love",\
+            "You're always there when I need you",\
+            "You make me feel safe and loved always",\
+            "Your so beautiful i just gotta lock in",\
+            "Every day with you is an adventure I'm grateful for"\
+        ];\
+\
+        let isSpinning = false;\
+\
+        function spinWheel() \{\
+            if (isSpinning) return;\
+            \
+            isSpinning = true;\
+            const button = document.getElementById('spinButton');\
+            const wheel = document.getElementById('wheel');\
+            const result = document.getElementById('wheelResult');\
+            \
+            button.disabled = true;\
+            result.textContent = '\uc0\u55356 \u57249  Spinning...';\
+            \
+            const wheelRect = wheel.getBoundingClientRect();\
+            const centerX = wheelRect.left + wheelRect.width / 2;\
+            const centerY = wheelRect.top + wheelRect.height / 2;\
+            createConfetti(centerX, centerY, 30);\
+            \
+            const spins = 5 + Math.floor(Math.random() * 3);\
+            const extraDegrees = Math.floor(Math.random() * 360);\
+            const totalRotation = (spins * 360) + extraDegrees;\
+            \
+            wheel.style.transform = `rotate($\{totalRotation\}deg)`;\
+            \
+            setTimeout(() => \{\
+                const randomReason = wheelReasons[Math.floor(Math.random() * wheelReasons.length)];\
+                result.textContent = randomReason;\
+                \
+                createConfetti(centerX, centerY, 80);\
+                showRandomMessage();\
+                \
+                button.disabled = false;\
+                isSpinning = false;\
+            \}, 4000);\
+        \}\
+\
+        // Create hearts periodically\
+        setInterval(createHeart, 1000);\
+        for(let i = 0; i < 15; i++) \{\
+            setTimeout(createHeart, i * 500);\
+        \}\
+\
+        // Create Sanrio characters periodically\
+        setInterval(createSanrioFloat, 3000);\
+        for(let i = 0; i < 5; i++) \{\
+            setTimeout(createSanrioFloat, i * 1000);\
+        \}\
+\
+        // Show random messages\
+        setInterval(showRandomMessage, 8000);\
+        setTimeout(showRandomMessage, 2000);\
+\
+        // Calculate time from April 8, 2024 to February 14, 2026\
+        const startDate = new Date('2024-04-08');\
+        const valentinesDay = new Date('2026-02-14');\
+        \
+        const diffTime = Math.abs(valentinesDay - startDate);\
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));\
+        const diffWeeks = Math.floor(diffDays / 7);\
+        const diffMonths = Math.floor(diffDays / 30.44);\
+\
+        // Counter animation\
+        function animateCounter(id, target) \{\
+            const element = document.getElementById(id);\
+            let current = 0;\
+            const increment = target / 50;\
+            const timer = setInterval(() => \{\
+                current += increment;\
+                if (current >= target) \{\
+                    element.textContent = target;\
+                    clearInterval(timer);\
+                \} else \{\
+                    element.textContent = Math.floor(current);\
+                \}\
+            \}, 30);\
+        \}\
+\
+        window.addEventListener('load', () => \{\
+            animateCounter('months', diffMonths);\
+            animateCounter('weeks', diffWeeks);\
+            animateCounter('days', diffDays);\
+        \});\
+\
+        // Show surprise message\
+        function showSurprise() \{\
+            const surprise = document.getElementById('surpriseMessage');\
+            surprise.classList.remove('hidden');\
+            surprise.style.animation = 'fadeInUp 0.8s forwards';\
+            \
+            for(let i = 0; i < 20; i++) \{\
+                setTimeout(() => createHeart(), i * 100);\
+            \}\
+            \
+            const button = event.target;\
+            const rect = button.getBoundingClientRect();\
+            createConfetti(rect.left + rect.width / 2, rect.top + rect.height / 2, 60);\
+        \}\
+    </script>\
+</body>\
+</html>}
